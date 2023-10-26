@@ -6,6 +6,7 @@
 	<title>Indian Railways - Connecting India, Redefining Journeys</title>
 	<link rel="stylesheet" href="style.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="script.js" defer></script>
 </head>
 <body>
 	<!-- Background -->
@@ -28,9 +29,9 @@
 			<!-- Book Ticket Form -->
 			<div id="ticket-book-form">
 				<b id="ticket-book-form-title">🙏 BOOK TICKET</b>
-				<input placeholder="Origin" class="form-input first-input" type="text">
-				<input placeholder="Destination" class="form-input second-input" type="text">
-				<button id="search-button">SEARCH</button>
+				<input id="origin-input" placeholder="Origin" class="form-input first-input" type="text">
+				<input id="destination-input" placeholder="Destination" class="form-input second-input" type="text">
+				<button id="search-button" onclick="search()">SEARCH</button>
 				<button id="quick-book-button"><i class="fa fa-flash" id="button-icon"></i> INSTANT BOOK</button>
 			</div>
 		</div>
@@ -40,6 +41,25 @@
 			<a href="/" class="first">CUSTOMER SUPPORT</a>
 			<a href="/" class="second">MEDICAL HELPLINE</a>
 		</div>
+	</div>
+
+	<!-- Loading Screen -->
+	<div id="loading-screen">
+		<canvas id="loading-background"></canvas>
+		<div id="loading" class="loadingio-spinner-dual-ring-mkkp5423ky"><div class="ldio-ck0e27riay7"><div></div><div><div></div></div></div></div>
+		<span id="loading-text">Hold on! We're finding the shortest route...</span>
+	</div>
+
+	<!-- Confirmation Screen -->
+	<div id="confirm-screen">
+		<canvas id="confirm-background" onclick="hide_confirm_screen()"></canvas>
+		<span id="confirm-text" onclick="hide_confirm_screen()">
+			<div class="graphic">🚆</div>
+			<div class="heading">Choo! Chug! Chuff!!!</div>
+			<div class="body">Your ticket has been successfully registered. Use this code when you enter the cabin. And remember, don't share it with anyone!</div>
+			<div class="location"><span id="from-final"></span> -> <span id="to-final"></span></div>
+			<div id="confirm-text-code" class="code"></div>
+		</span>
 	</div>
 </body>
 </html>
