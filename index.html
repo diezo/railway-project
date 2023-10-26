@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Indian Railways - Connecting India, Redefining Journeys</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<!-- Background -->
+	<canvas id="bg-image"></canvas>
+	<canvas id="bg-layer"></canvas>
+
+	<div id="main">
+		<!-- Header -->
+		<div id="header">
+			<i id="head-logo" class="fa fa-train"></i>
+			<span id="head-title">INDIAN RAILWAYS</span>
+		</div>
+
+		<div id="container">
+			<!-- Greeting Graphic -->
+			<video autoplay loop muted id="greeting-graphic">
+				<source src="src/anim.mp4" type="video/mp4">
+			</video>
+
+			<!-- Book Ticket Form -->
+			<div id="ticket-book-form">
+				<b id="ticket-book-form-title">🙏 BOOK TICKET</b>
+				<input placeholder="Origin" class="form-input first-input" type="text">
+				<input placeholder="Destination" class="form-input second-input" type="text">
+				<button id="search-button">SEARCH</button>
+				<button id="quick-book-button"><i class="fa fa-flash" id="button-icon"></i> INSTANT BOOK</button>
+			</div>
+		</div>
+
+		<!-- Helpline Tabs -->
+		<div id="helpline-tabs">
+			<a href="/" class="first">CUSTOMER SUPPORT</a>
+			<a href="/" class="second">MEDICAL HELPLINE</a>
+		</div>
+	</div>
+</body>
+</html>
