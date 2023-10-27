@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0; user-scalable=0; maximum-scale=1.0">
+    <title>Customer Support - Chat with our Support Agent!</title>
+    <link rel="stylesheet" href="chat.css">
+</head>
+<body>
+    <video id="background-video" autoplay muted loop><source src="src/anim.mp4" type="video/mp4"></video>
+    <canvas id="background-layer"></canvas>
+
+    <div id="main">
+        <div id="header">Customer Support</div>
+        <div id="messages-container">
+            <div style="margin-top: 10px;" class="msg-received">Hey</div><br>
+            <div class="msg-received">How may I help you today?</div><br>
+            <div class="msg-sent-container">
+                <div class="spacing"></div>
+                <div class="msg-sent">Hello</div>
+            </div>
+        </div>
+        <div id="bottom-bar">
+            <input id="message-box" type="text" placeholder="Message">
+        </div>
+    </div>
+</body>
+</html>
